@@ -1,0 +1,13 @@
+--Draw a triangle 
+--Write a query to print the pattern P(20)
+
+set @num=0;
+select repeat('* ', @num:=@num+1)
+FROM information_schema.tables
+limit 20
+
+--Draw a upside down version
+
+set @num=21;
+select repeat('* ', @num:= @num-1)
+FROM information_schema.tables
